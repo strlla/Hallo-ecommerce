@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: var(--crema);
+  z-index: 100;
+}
+header{
+  background: var(--celeste);
+  background: var(--pral-gradient);
+  top: 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+}
+button{
+  outline: none;
+  border: none;
+}
+.title-1{
+  font-size: 33px;
+  font-family: 'Rubik', sans-serif;
+  color: var(--blanco);
+  letter-spacing: 2px;
+}
+
+.title-2{
+  font-size: 26px;
+  font-family: 'Rubik', sans-serif;
+  color: var(--blanco);
+}
+
+.title-3{
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  word-spacing: 6px;
+  color: var(--blanco);
+}
+.body-1{
+  font-size: 12px;
+  font-family: 'Rubik', sans-serif;
+  word-spacing: 1px;
+  color: var(--violeta-desaturado);
+}
+.button-text{
+  font-size: 16px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+  color: var(--blanco);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1025px){
+  .title-1{
+    font-size: 37px;
+    text-shadow: #00000020 0px 2px 3px;
+  }
+  .title-2{
+    font-size: 28px;
+  }
+  .title-3{
+    font-size: 22px;
+  }
+  .body-1{
+    font-size: 14px;
+  }
+}
+:root{
+ --violeta: #4b00df; 
+ --violeta-oscuro: #290066;
+ --violeta-saturado: #533aed;
+ --violeta-desaturado: #60429c;
+ --shadow-violeta: #6245d810;
+ --rosa: #fc5787;
+ --rosa-saturado: #ff5485;
+ --rojo-oscuro: #a00747;
+ --blanco: #F4F4F4;
+ --crema: #F0E6EF;
+ --gris-claro: #EDEDED;
+ --gris: #d3d5e1;
+ --pral-gradient: linear-gradient(90deg, var(--violeta) 0%, var(--violeta-oscuro) 100%);
+}

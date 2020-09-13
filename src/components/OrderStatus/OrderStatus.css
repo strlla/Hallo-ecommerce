@@ -1,0 +1,19 @@
+.orderstatus-modal {
+    width: 40vw;
+    min-height: 40px;
+    padding: 20px;
+    margin: auto;
+    border-radius: 30px;
+    background-color: var(--blanco);
+    box-shadow: var(--shadow-violeta) 3px 1px;
+    z-index: 100;
+}
+
+.orderstatus-modal > h2 {
+    margin: 0 auto;
+    color: var(--violeta);
+}
+
+.orderstatus-modal > p {
+    margin: 10px auto;
+}

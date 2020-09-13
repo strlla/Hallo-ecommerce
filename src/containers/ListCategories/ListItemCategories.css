@@ -1,0 +1,45 @@
+.list-item{
+    margin: 0 auto 20px;
+}
+.categories-container{
+    background: transparent;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.categories-container > svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 400px;
+    width: 100vw;
+    left: 0;
+    fill: url(#gradient-horizontal);
+}
+
+@media only screen and (max-width: 768px){
+    svg {
+        width: 100vw;
+        height: 630px;
+    }
+    .title-container > h1 {
+        font-size: 37px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .title-container > h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .title-container > h1 {
+        font-size: 67px;
+    }
+}
+

@@ -1,0 +1,114 @@
+.cart {
+    width: 90vw;
+    border-radius: 20px;
+    background-color: var(--blanco);
+    box-shadow: var(--shadow-violeta-transparente) 0px 20px 30px 0px;
+    margin: 40vh auto 20px;
+    position: absolute;
+    left: 4.8vw;
+}
+
+svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: url(#gradient-horizontal);
+}
+
+#gradient-horizontal {
+    --color-stop-1: var(--violeta);
+    --color-stop-3: var(--violeta-oscuro);
+}
+
+.title-container{
+    position: inherit;
+}
+
+.title-container > h1 {
+    position: absolute;
+    color: var(--blanco);
+    text-transform: uppercase;
+    margin-left: 5.5vw;
+}
+
+.cart-item {
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    width: 80%;
+}
+
+.cart-item > h1 {
+    color: var(--violeta-desaturado);
+}
+
+.cart-item > li {
+    padding: 15px 0px;
+    border-bottom: var(--gris-claro) 1px solid;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart-item > li > span {
+    font-size: 24px;
+    color: var(--violeta-oscuro);
+}
+
+
+.li-empty-cart{
+    color: var(--violeta-oscuro);
+    font-weight: 700;
+    display: block;
+}
+.li-empty-cart > a {
+    font-weight: 400;
+    display: block;
+    padding: 2px;
+}
+.li-empty-cart > a:hover{
+    background-color: var(--gris-claro);
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+}
+
+.delete-item{
+    font-size: 20px !important;
+    color: var(--gris) !important;
+    font-weight: 400 !important;
+    text-transform: lowercase !important;
+}
+.checkout-button {
+    width: 120px;
+    background: var(--violeta);
+    box-shadow: #4b00df30 0px 0px 0px 5px;
+    border-radius: 20px;
+    padding: 10px 15px;
+}
+.checkout-button:active{
+    background: var(--violeta-oscuro);
+    box-shadow: none;
+    transition: box-shadow 0.1s ease-in;
+}
+@media only screen and (max-width: 768px){
+    svg {
+        width: 100vw;
+        height: 630px;
+    }
+    .title-container > h1 {
+        font-size: 37px;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .title-container > h1 {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .title-container > h1 {
+        font-size: 67px;
+    }
+}
+
