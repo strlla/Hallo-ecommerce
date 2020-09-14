@@ -1,7 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hallo
+## E-commerce del curso de ReactJS de Coderhouse
 
-# Hallo-ecommerce
-### Proyecto Final - ReactJS Coderhouse
+### Instrucciones de instalación
 ## Available Scripts
 
 In the project directory, you can run:
