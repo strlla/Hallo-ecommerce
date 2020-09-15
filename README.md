@@ -1,8 +1,8 @@
 # Hallo
-E-commerce del curso de ReactJS de Coderhouse
+E-commerce del curso de ReactJS de Coderhouse </br>
 por **Estrella Portocarrero**
 
-## Instalación
+## Instrucciones de instalación
 ``` 
 clone https://github.com/strlla/Hallo-ecommerce.git
 npm install
@@ -15,12 +15,15 @@ npm start
 ## Routes
 |Route| Descripción |
 |--|--|
-| / | Home y lista de productos |
-| /item/:id | Detalles del producto |
-| /category/:id | Lista de productos según categoría |
-| /cart | Carrito |
+| / | Home y listado de todos los productos |
+| /item/:id | Detalles del producto según el id del item. En caso de que el produtco en la base de datos, se avisa al usuario al respecto.
+| /category/:categoryId | Listado de productos según categoría |
+| /cart | Carrito en el que se muestra un resumen del pedido del usuario|
 
 ## Dependencias
 
  - [framer-motion](https://www.npmjs.com/package/framer-motion)
+ [justificar]
  - [styled-components](https://www.npmjs.com/package/styled-components)
+[justificar]
+
