@@ -12,7 +12,7 @@ import './ListItemCategories.css';
 const ListItemCategories = () => {
     const { categoryId } = useParams();
     const [items, setItems] = useState([]);
-    const [isLoading, setIsLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
     
     useEffect(()=>{
         document.title = "Hallo";
@@ -21,19 +21,15 @@ const ListItemCategories = () => {
     useEffect(()=>{
         const db = getFirestore();
         const itemCollection = db.collection('items');
-        //const filteredItems = categoryId ? Item.filter(i => i.categoryId === categoryId ) : items;
         const itemsPerCategory = itemCollection.where('categoryId','==', categoryId);
 
         itemsPerCategory.get().then((querySnapshot) => {
             //debugger;
-            /* 
-            if(!querySnapshot.size === 0){
-                console.log('No existe items de más de 600 pesos')
-            } */
-            setIsLoading(false);
+            setLoading(false);
             setItems(querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})));
         });
     })
+    
     return(
         <>
             <section className="categories-container">
@@ -49,7 +45,7 @@ const ListItemCategories = () => {
                 </div>
             </section>
             <div className="list-item">
-                <ListItem Item={Item} isLoading={isLoading} items={items}/>
+                <ListItem Item={Item} isLoading={loading} items={items}/>
             </div>
         </>
     )

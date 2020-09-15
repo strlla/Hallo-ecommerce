@@ -14,6 +14,7 @@ import './Cart.css';
 const Cart = () => {
     const {list, deleteItem, price} = useCartContext();
     const [checkout, setCheckout] = useState(false);
+    const [show, setShow] = useState(false);
     const [userInfo, setUserInfo] = useState(null);
     const [loading, setLoading] = useState(false);
     const [status, setStatus] = useState(null);
@@ -56,7 +57,6 @@ const Cart = () => {
         
         if(outOfStock.length === 0){
             await batch.commit();
-
             try {
                 /*                
                     orders.add(newOrder).then(({id}) => {
@@ -64,28 +64,36 @@ const Cart = () => {
                     }) 
                 */
                 const { id } = await orders.add(newOrder);
+                setOrderId(id);
+                console.log(id);
                 setLoading(false);
                 setCheckout(false);
-                setStatus('¡Tu compra fue realizada con éxito!');
-                console.log(id);
+                setStatus(`¡Tu compra fue realizada con éxito!`);
+                showModal();
             } catch (err) {
                 //seteamos feedback para el usuario
                 console.log(err);
                 setStatus(err);
             }
-
         }else{
             setLoading(false);       
             setCheckout(false);
             setStatus('Nos quedamos sin stock y no pudimos realizar tu compra');
+            showModal();
         }
         if(outOfStock.length !== 0){
-            console.log('Pasó algo', outOfStock.length);
+            console.log('Items sin stock: ', outOfStock.length);
         }
+    }
+    function showModal(){
+        setShow(true);
+        setTimeout(()=>{
+            setShow(false);
+        }, 3000)
     }
     return <>
         { checkout && <Checkout createOrder={createOrder} onChange={updateUserInfo} setShowModal={setCheckout} loading={loading} /> }
-        { status && <OrderStatus status={status} setStatus={setStatus}/> }
+        { show && <OrderStatus status={status} setStatus={setStatus} orderId={orderId}/> }
         <section className="cart-section">
             <svg viewBox="0 0 500 250" preserveAspectRatio="none">
                 <linearGradient id="gradient-horizontal">
@@ -102,7 +110,7 @@ const Cart = () => {
                     {list.length === 0 ? <EmptyCart/> : <>
                         {list.map(i => 
                             <li>
-                                <span><strong>{i.title}</strong></span>
+                                <span><Link to={`/item/${i.id}`}><strong>{i.title}</strong></Link></span>
                                 <span><strong>${i.price}</strong> x {i.quantity}</span>
                                 <motion.span className="button-text delete-item" onClick={()=>{deleteItem(i.id)}} whileTap={{scale: 0.9}}>x</motion.span>
                             </li>)}

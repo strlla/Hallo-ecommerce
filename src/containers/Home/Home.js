@@ -9,20 +9,12 @@ import { getFirestore } from '../../firebase/index.js';
 import './Home.css'
 const Home = ({greeting}) => {
     const [items, setItems] = useState([]);
-    const [isLoading, setIsLoading] = useState(true)
-
-
+    const [isLoading, setIsLoading] = useState(true);
     const db = getFirestore();
     const itemCollection = db.collection('items');
-    //const priceyItems = itemCollection.where('price','>',200);
     itemCollection.get().then((querySnapshot) => {
-            //debugger;
-            /* 
-            if(!querySnapshot.size === 0){
-                console.log('No existe items de más de 600 pesos')
-            } */
+        //debugger;
         setIsLoading(false);
-        let items = {}
         setItems(querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})));
     })
     

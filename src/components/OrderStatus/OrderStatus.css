@@ -1,6 +1,10 @@
+.status-backdrop {
+    background-color: transparent !important; 
+}
+
 .orderstatus-modal {
-    width: 40vw;
-    min-height: 40px;
+    width: 30vw;
+    min-height: 25px;
     padding: 20px;
     margin: auto;
     border-radius: 30px;
@@ -9,11 +13,8 @@
     z-index: 100;
 }
 
-.orderstatus-modal > h2 {
+.orderstatus-modal > h3 {
     margin: 0 auto;
+    font-size: 18px;
     color: var(--violeta);
-}
-
-.orderstatus-modal > p {
-    margin: 10px auto;
 }

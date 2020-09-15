@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {motion, AnimatePresence } from 'framer-motion';
 import './OrderStatus.css';
 
@@ -20,20 +20,13 @@ const modal = {
     }
 }
 
-function OrderStatus({status, setStatus}){
-
-    useEffect(()=>{
-        setTimeout(()=>{
-           setStatus(null)
-        }, 2000)
-    })
-
+function OrderStatus({status, orderId}){
     return <AnimatePresence exitBeforeEnter>
         <motion.div className="backdrop status-backdrop" variants={backdrop} initial="hidden" animate="visible" exit= "hidden">
             <motion.div variants={modal}>
                 <div className="orderstatus-modal">
-                    <h2 className="title-2">Estado de mi orden</h2>
-                    <p className="body-1">{status}</p>
+                    <h3 className="title-3">{status}</h3>
+                    {orderId && <p className="body-1">Aca tenés el código de tu orden {orderId}</p>}
                 </div>
             </motion.div>
         </motion.div>

@@ -1,10 +1,10 @@
 import React, {useContext, useState} from 'react'
-
 export const CartContext = React.createContext();
 export const useCartContext = () => useContext(CartContext)
 
 export function CartProvider ({value, maxSize, children}){
     const [list, setList] = useState(value || []);
+    const [status, setStatus] = useState(null);
 
     function itemOnCart(id){
         const found = list.find(item => item.id === id);
@@ -36,6 +36,7 @@ export function CartProvider ({value, maxSize, children}){
             setList(l);
           }
         }
+        setStatus('Item agregado')
     };
     
     function deleteItem(itemId) {
@@ -48,7 +49,7 @@ export function CartProvider ({value, maxSize, children}){
     }
     
     return (
-        <CartContext.Provider value={{list, addItem, cleanList, deleteItem, price, quantity: size()}}>
+        <CartContext.Provider value={{list, addItem, cleanList, deleteItem, status, price, quantity: size()}}>
             {children}
         </CartContext.Provider>
     )
