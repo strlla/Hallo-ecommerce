@@ -1,6 +1,6 @@
 # Hallo
-E-commerce del curso de ReactJS de Coderhouse </br>
 por **Estrella Portocarrero**
+E-commerce del curso de ReactJS de Coderhouse </br>
 
 ## Instrucciones de instalación
 ``` 
