@@ -10,7 +10,7 @@ npm start
 ```
 
 ## User Flow
-[inserte gif]
+![demo](demo/demo.gif)
 
 ## Routes
 |Route| Descripción |
