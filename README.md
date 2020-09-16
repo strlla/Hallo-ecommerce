@@ -1,6 +1,6 @@
 # Hallo
-por **Estrella Portocarrero**
 E-commerce del curso de ReactJS de Coderhouse </br>
+por **Estrella Portocarrero**
 
 ## Instrucciones de instalación
 ``` 
@@ -21,9 +21,6 @@ npm start
 | /cart | Carrito en el que se muestra un resumen del pedido del usuario|
 
 ## Dependencias
-
- - [framer-motion](https://www.npmjs.com/package/framer-motion)
- [justificar]
- - [styled-components](https://www.npmjs.com/package/styled-components)
-[justificar]
-
+Librearias usadas para proporcionar un **contenido más dinámico e interactivo.**
+ - [framer-motion](https://www.npmjs.com/package/framer-motion): libreria open-source para realizar animaciones.
+ - [styled-components](https://www.npmjs.com/package/styled-components): libreria que permite crear componentes de React, y al mismo tiempo definir sus estilos condicionados a sus propiedades.
