@@ -15,10 +15,10 @@ npm start
 ## Routes
 |Route| Descripción |
 |--|--|
-| / | Home y listado de todos los productos |
+| / | Home y listado de todos los productos. |
 | /item/:id | Detalles del producto según el id del item. En caso de que el produtco en la base de datos, se avisa al usuario al respecto.
-| /category/:categoryId | Listado de productos según categoría |
-| /cart | Carrito en el que se muestra un resumen del pedido del usuario|
+| /category/:categoryId | Listado de productos según categoría. |
+| /cart | Carrito en el que se muestra un resumen del pedido del usuario.|
 
 ## Dependencias
 Librearias usadas para proporcionar un **contenido más dinámico e interactivo.**
