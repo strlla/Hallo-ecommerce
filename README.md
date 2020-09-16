@@ -1,3 +1,4 @@
+
 # Hallo
 E-commerce del curso de ReactJS de Coderhouse </br>
 por **Estrella Portocarrero**
@@ -8,10 +9,6 @@ clone https://github.com/strlla/Hallo-ecommerce.git
 npm install
 npm start
 ```
-
-## Walkthrough
-![demo](demo/demo.gif)
-
 ## Routes
 |Route| Descripción |
 |--|--|
@@ -20,7 +17,12 @@ npm start
 | /category/:categoryId | Listado de productos según categoría. |
 | /cart | Carrito en el que se muestra un resumen del pedido del usuario.|
 
+## Walkthrough
+![demo](demo/demo.gif)
+
 ## Dependencias
-Librearias usadas para proporcionar un **contenido más dinámico e interactivo.**
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [firebase](https://www.npmjs.com/package/firebase)
+Librerías usadas para proporcionar un **contenido más dinámico e interactivo.**
  - [framer-motion](https://www.npmjs.com/package/framer-motion): libreria open-source para realizar animaciones.
  - [styled-components](https://www.npmjs.com/package/styled-components): libreria que permite crear componentes de React, y al mismo tiempo definir sus estilos condicionados a sus propiedades.
