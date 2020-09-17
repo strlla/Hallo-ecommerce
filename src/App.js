@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import {CartProvider} from './contexts/CartContext';
 import { getFirestore } from './firebase';
-//import categories from './assets/categories';
 
 import './App.css';
 
