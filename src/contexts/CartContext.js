@@ -36,7 +36,7 @@ export function CartProvider ({value, maxSize, children}){
             setList(l);
           }
         }
-        setStatus('Item agregado')
+        setStatus('👍 Item agregado')
     };
     
     function deleteItem(itemId) {
@@ -54,8 +54,3 @@ export function CartProvider ({value, maxSize, children}){
         </CartContext.Provider>
     )
 }
-
-
-/*
-[ { id: 1, price: 20 }, { id: 2, price: 30 } ].reduce((prev, next) => prev + next.price, 0);
- */
