@@ -38,10 +38,6 @@ function Checkout ({createOrder, onChange, setShowModal, loading}){
         setForm(formData);
     }
 
-    function emptyFields(){
-        return true
-        //Object.keys(form).every(k => form[k] !== '') ? true : false
-    }
     function onSubmit(){
         if(form.email !== form.email2){
             setMessage("Parece que los emails que ingresaste no son iguales");
@@ -54,7 +50,7 @@ function Checkout ({createOrder, onChange, setShowModal, loading}){
             <motion.div className="backdrop" variants={backdrop} initial="hidden" animate="visible" exit= "hidden">
                 <motion.div variants={modal}>
                     <div className="checkout-modal">
-                        <h1 className="title-1">¡Ultimo Paso!</h1>
+                        <h1 className="title-1">¡Último Paso!</h1>
                         <p className="title-3">Completá el siguiente formulario con tus datos</p>
                         <div className="checkout-content">
                             <div className="flex-gap">
@@ -66,7 +62,7 @@ function Checkout ({createOrder, onChange, setShowModal, loading}){
                             {message && <p className="body-1">{message}</p>}
                             <div className="flex-gap">
                                 <motion.button type="button" className="button-text close-button" whileTap={{scale: 0.95}} onClick={()=>{setShowModal(false)}}>Cancelar</motion.button>
-                                <motion.button type="button" className="button-text submit-button" whileTap={Object.keys(form).every(k => form[k]) && {scale: 0.95}} whileHover={Object.keys(form).every(k => form[k]) && {scale: 1.05}} onClick={onSubmit} disabled={Object.keys(form).every(k => form[k]) ? false : true} >{loading ? "Procesando compra ..." : "Finalizar Compra"}</motion.button>
+                                <motion.button type="button" className="button-text submit-button" whileTap={Object.keys(form).every(k => form[k]) && {scale: 0.95}} whileHover={Object.keys(form).every(k => form[k]) && {scale: 1.05}} onClick={onSubmit} disabled={Object.keys(form).every(k => form[k]) ? false : true} >{loading ? "⏳ Procesando orden..." : "Finalizar Compra"}</motion.button>
                             </div>
                         </div>
                     </div>
@@ -75,4 +71,4 @@ function Checkout ({createOrder, onChange, setShowModal, loading}){
     </AnimatePresence>
 }
 
-export default Checkout
+export default Checkout;

@@ -8,6 +8,7 @@
     cursor: pointer;
     background: var(--shadow-violeta) 0% 0% no-repeat padding-box;;
 }
+
 .checkout-modal{
     width: 80vw;
     padding: 20px;
@@ -37,14 +38,27 @@
     color: var(--gris);
     font-weight: 500;
 }
+
+.close-button:hover{
+    background-color: var(--gris);
+    color: var(--blanco);
+    transition: background-color 0.2s ease-in-out;
+}
+
 .submit-button {
     display: block;
     margin: 30px auto 10px;
     width: fit-content;
     background: var(--violeta);
-    box-shadow: #4b00df30 0px 0px 0px 5px;
+    box-shadow:#4b00df30 0px 0px 0px 3px;
     border-radius: 20px;
     padding: 10px 15px;
+}
+.submit-button:hover{
+    background-color: var(--violeta-saturado);
+    box-shadow: #4b00df30 0px 0px 0px 5px;
+    transition: background-color 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
 }
 .submit-button:active{
     background: var(--violeta-oscuro);
@@ -54,7 +68,9 @@
 .submit-button:disabled{
     box-shadow: none;
     background: var(--gris);
+    cursor: default;
 }
+
 .flex-gap{
     display: inline-flex;
     flex-wrap: wrap;
