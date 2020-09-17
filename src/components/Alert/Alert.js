@@ -1,6 +1,6 @@
 import React from 'react';
 import {motion, AnimatePresence } from 'framer-motion';
-import './OrderStatus.css';
+import './Alert.css';
 
 const backdrop = {
     visible: { opacity: 1},
