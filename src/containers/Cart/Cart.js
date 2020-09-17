@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom'
 import easeEffectVariants from '../../assets/easeEffect';
 import {motion} from 'framer-motion';
 import { useCartContext } from '../../contexts/CartContext';
+import { getFirestore } from '../../firebase';
+import Checkout from '../../components/Checkout/Checkout';
+import OrderStatus from '../../components/Alert/Alert';
 import * as firebase from 'firebase/app';
 import 'firebase/firestore';
-import { getFirestore } from '../../firebase';
-//import OrderStatus from '../OrderStatus/OrderStatus';
-import Checkout from '../../components/Checkout/Checkout';
-import OrderStatus from '../../components/OrderStatus/OrderStatus';
 import './Cart.css';
 
 const Cart = () => {
@@ -58,17 +57,12 @@ const Cart = () => {
         if(outOfStock.length === 0){
             await batch.commit();
             try {
-                /*                
-                    orders.add(newOrder).then(({id}) => {
-                        console.log(id)
-                    }) 
-                */
                 const { id } = await orders.add(newOrder);
                 setOrderId(id);
                 console.log(id);
                 setLoading(false);
                 setCheckout(false);
-                setStatus(`¡Tu compra fue realizada con éxito!`);
+                setStatus('✨¡Tu compra fue realizada con éxito!');
                 showModal();
             } catch (err) {
                 //seteamos feedback para el usuario
@@ -78,7 +72,7 @@ const Cart = () => {
         }else{
             setLoading(false);       
             setCheckout(false);
-            setStatus('Nos quedamos sin stock y no pudimos realizar tu compra');
+            setStatus('😯 Nos quedamos sin stock y no se pudo realizar tu compra');
             showModal();
         }
         if(outOfStock.length !== 0){

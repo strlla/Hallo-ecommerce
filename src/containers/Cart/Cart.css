@@ -55,12 +55,12 @@ svg {
     color: var(--violeta-oscuro);
 }
 
-
 .li-empty-cart{
     color: var(--violeta-oscuro);
     font-weight: 700;
     display: block;
 }
+
 .li-empty-cart > a {
     font-weight: 400;
     display: block;
@@ -81,9 +81,15 @@ svg {
 .checkout-button {
     width: 120px;
     background: var(--violeta);
-    box-shadow: #4b00df30 0px 0px 0px 5px;
+    box-shadow:#4b00df30 0px 0px 0px 3px;
     border-radius: 20px;
     padding: 10px 15px;
+}
+.checkout-button:hover{
+    background-color: var(--violeta-saturado);
+    box-shadow: #4b00df30 0px 0px 0px 5px;
+    transition: background-color 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
 }
 .checkout-button:active{
     background: var(--violeta-oscuro);
