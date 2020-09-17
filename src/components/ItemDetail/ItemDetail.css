@@ -10,7 +10,7 @@
 .detail-image-container {
     width: 350px;
     height: 100%;
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px 0 0 0;
 }
 
 .detail-image-container > img {

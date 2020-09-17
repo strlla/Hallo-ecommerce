@@ -16,16 +16,21 @@
     margin: 30px 0 20px 5vw;
 }
 
-.buy-button {
+.buy-button{
     height: fit-content;
     font-size: 20px;
     margin: 10px auto 20px;
     color: var(--blanco);
     background-color: var(--violeta);
+    box-shadow:#4b00df30 0px 0px 0px 3px;
     padding: 10px;
     border-radius: 20px;
+}
+.buy-button:hover{
+    background-color: var(--violeta-saturado);
     box-shadow: #4b00df30 0px 0px 0px 5px;
-    transition: box-shadow 0.1s ease-in;
+    transition: background-color 0.2s ease-in;
+    transition: box-shadow 0.2s ease-in;
 }
 .buy-button:active {
     background-color: var(--violeta-oscuro);

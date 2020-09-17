@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom';
 import { getFirestore } from '../../firebase';
 import ItemDetail from '../../components/ItemDetail/ItemDetail.js';
 import ItemCount from '../../components/ItemCount/ItemCount.js';
-import OrderStatus from '../../components/OrderStatus/OrderStatus.js';
+import OrderStatus from '../../components/Alert/Alert.js';
 import {useCartContext} from '../../contexts/CartContext.js';
 import './ItemDetailContainer.css';
 
@@ -54,7 +54,7 @@ const ItemDetailContainer = () => {
             <ItemDetail isLoading={loading} item={item}/>
             {!loading && <ItemCount className="item-count" min={item.stock === 0 ? 0 : 1} max={item.stock} initial={item.stock === 0 ? 0 : 1} count={count} setCount={setCount}/>}
             {loading && <motion.button className="buy-button button-text" disabled={true}>comprar {count}</motion.button>}
-            {!loading && <motion.button whileTap={item.stock && {scale: 0.95}} whileHover={item.stock && {scale: 1.05}} className="buy-button button-text" disabled={item.stock === 0} onClick={()=>{onAdd(item)}}>comprar {count}</motion.button> }
+            {!loading && <motion.button whileTap={item.stock && {scale: 0.95}} whileHover={item.stock && {scale: 1.05}} className="buy-button button-text" disabled={item.stock === 0} onClick={()=>{onAdd(item)}}>Agregar {count}</motion.button> }
         </section>
     </>
 }
