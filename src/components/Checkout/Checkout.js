@@ -42,6 +42,7 @@ function Checkout ({createOrder, onChange, setShowModal, loading}){
         if(form.email !== form.email2){
             setMessage("Parece que los emails que ingresaste no son iguales");
         }else{
+            setMessage("");
             createOrder();
         }
     }

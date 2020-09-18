@@ -54,12 +54,14 @@
     border-radius: 20px;
     padding: 10px 15px;
 }
+
 .submit-button:hover{
     background-color: var(--violeta-saturado);
     box-shadow: #4b00df30 0px 0px 0px 5px;
     transition: background-color 0.2s ease-in;
     transition: box-shadow 0.2s ease-in;
 }
+
 .submit-button:active{
     background: var(--violeta-oscuro);
     box-shadow: none;
