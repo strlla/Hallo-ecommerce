@@ -5,7 +5,7 @@ por **Estrella Portocarrero**
 
 ## Instrucciones de instalación
 ``` 
-clone https://github.com/strlla/Hallo-ecommerce.git
+git clone https://github.com/strlla/Hallo-ecommerce.git
 npm install
 npm start
 ```
@@ -23,6 +23,6 @@ npm start
 ## Dependencias
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 - [firebase](https://www.npmjs.com/package/firebase) </br>
-Librerías usadas para proporcionar un **contenido más dinámico e interactivo.**
+Librerías usadas para proporcionar un **contenido más dinámico e interactivo**:
  - [framer-motion](https://www.npmjs.com/package/framer-motion): libreria open-source para realizar animaciones.
  - [styled-components](https://www.npmjs.com/package/styled-components): libreria que permite crear componentes de React, y al mismo tiempo definir sus estilos condicionados a sus propiedades.
