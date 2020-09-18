@@ -48,9 +48,7 @@ export function CartProvider ({value, maxSize, children}){
         setList([]);
     }
     
-    return (
-        <CartContext.Provider value={{list, addItem, cleanList, deleteItem, status, price, quantity: size()}}>
+    return <CartContext.Provider value={{list, addItem, cleanList, deleteItem, status, price, quantity: size()}}>
             {children}
-        </CartContext.Provider>
-    )
+    </CartContext.Provider>    
 }
