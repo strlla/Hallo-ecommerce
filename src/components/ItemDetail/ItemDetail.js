@@ -4,8 +4,7 @@ import ItemLoader from '../Loaders/ItemLoader'
 import './ItemDetail.css'
 
 const ItemDetail = ({isLoading, item}) => {
-    return(
-        <div className="item-detail">
+    return <div className="item-detail">
             <div className="detail-image-container">
                 {isLoading ? <ItemLoader height="inherit" width="inherit" borderRadius="inherit"/> :  <img src={item.imageId}/> }
             </div>
@@ -15,8 +14,7 @@ const ItemDetail = ({isLoading, item}) => {
                 {isLoading ? <TextLoader style={{top: '160px'}} className="detail-description" width="60%" height="20px"/> : <p className="title-3">{item.description}</p> }
                 {isLoading ? <TextLoader style={{top: '200px'}} className="detail-description" width="70%" height="20px"/> : null}
             </div>
-        </div>
-    )
+    </div>
 }
 
 export default ItemDetail;
