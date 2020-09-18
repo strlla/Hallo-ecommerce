@@ -1,7 +1,7 @@
 import React from 'react'
-import './ItemDetail.css'
 import TextLoader from '../Loaders/TextLoader'
 import ItemLoader from '../Loaders/ItemLoader'
+import './ItemDetail.css'
 
 const ItemDetail = ({isLoading, item}) => {
     return(
@@ -19,4 +19,4 @@ const ItemDetail = ({isLoading, item}) => {
     )
 }
 
-export default ItemDetail
+export default ItemDetail;
