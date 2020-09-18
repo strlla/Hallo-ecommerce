@@ -5,8 +5,7 @@ import './ListItem.css'
 
 const ListItem = ( {Item, items, isLoading}) => {
 
-    return(
-        <section className="card-container" style={{margin: '20px auto 20px'}}>
+    return <section className="card-container" style={{margin: '20px auto 20px'}}>
             {isLoading && [...Array(9)].map(()=>{
                 return(
                     <Item />
@@ -17,7 +16,7 @@ const ListItem = ( {Item, items, isLoading}) => {
                     <Link to={`/item/${item.id}`}><Item isLoading={isLoading} image={item.imageId} title={item.title} description={item.description} price={item.price} /></Link>
                 )
             })}
-        </section> 
-    )
+    </section>     
 }
-export default ListItem
+
+export default ListItem;
