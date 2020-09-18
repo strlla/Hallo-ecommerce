@@ -3,9 +3,7 @@ import { motion } from 'framer-motion';
 import iconflechita from '../assets/icons/flechita.svg';
 
 const ArrowIcon = () => {
-    return(
-        <motion.img style={style} variants={variants} initial="initial" animate="animate" src={iconflechita} height={24} alt=""/>
-    )
+    return <motion.img style={style} variants={variants} initial="initial" animate="animate" src={iconflechita} height={24} alt=""/>
 }
 const style={
     margin: '40px auto',
