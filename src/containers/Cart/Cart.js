@@ -35,8 +35,6 @@ const Cart = () => {
         setLoading(true);
         const query = await itemsToUpdate.get();
         const batch = db.batch();
-        
-        //ITERAR ITEMS Y ACTUALIZAR STOCK
         const outOfStock = [];
         const orders = db.collection('orders');
         const newOrder = {
