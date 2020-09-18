@@ -5,7 +5,7 @@ por **Estrella Portocarrero**
 
 ## Instrucciones de instalación
 ``` 
-clone https://github.com/strlla/Hallo-ecommerce.git
+git clone https://github.com/strlla/Hallo-ecommerce.git
 npm install
 npm start
 ```
