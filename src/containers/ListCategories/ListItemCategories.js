@@ -50,23 +50,4 @@ const ListItemCategories = () => {
         </>
     )
 }
-export default ListItemCategories
-
-/*
-  
- const filteredItems = categoryId ? Item.filter(i => i.categoryId === categoryId ) : items
-    
-        const db = getFirestore();
-        const itemCollection = db.collection('items');
-        //const priceyItems = itemCollection.where('price','>',200);
-        itemCollection.get().then((querySnapshot) => {
-            //debugger;
-            /* 
-            if(!querySnapshot.size === 0){
-                console.log('No existe items de más de 600 pesos')
-            } 
-            setIsLoading(false);
-            let items = {}
-            setItems(querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})));
-            console.log(querySnapshot.docs.map(doc => ({...doc.data(), id: doc.id})));
-        }) */
+export default ListItemCategories;
