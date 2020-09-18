@@ -6,6 +6,7 @@ const ItemCount = ({min, max, initial, count, setCount}) => {
     useEffect(()=>{
         setCount(initial)
     },[])
+    
     const Increment = () => {
         if(count < max){
             setCount(count + 1)
