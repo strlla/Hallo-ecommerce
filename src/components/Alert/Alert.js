@@ -26,7 +26,7 @@ function OrderStatus({status, orderId}){
             <motion.div variants={modal}>
                 <div className="orderstatus-modal">
                     <h3 className="title-3">{status}</h3>
-                    {orderId && <p className="body-1">Aca tenés el código de tu orden {orderId}</p>}
+                    {orderId && <p className="body-1">Acá tenés el código de tu orden {orderId}</p>}
                 </div>
             </motion.div>
         </motion.div>
