@@ -20,7 +20,7 @@ export function CartProvider ({value, maxSize, children}){
     function size(){
         return list.reduce((prev, next) => (prev + next.quantity), 0);
     }
-    //const order 
+
     function addItem(newItem) {
         if(itemOnCart(newItem.id)){
             const newList = [...list];
