@@ -12,6 +12,7 @@ const Home = ({greeting}) => {
     const [isLoading, setIsLoading] = useState(true);
     const db = getFirestore();
     const itemCollection = db.collection('items');
+    
     itemCollection.get().then((querySnapshot) => {
         //debugger;
         setIsLoading(false);
@@ -21,6 +22,7 @@ const Home = ({greeting}) => {
     useEffect(()=>{
         document.title = "Hallo";
     }, []);
+    
     return(
         <>
             <section className="home-container">
